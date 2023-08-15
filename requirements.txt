@@ -1,12 +1,8 @@
 asgiref==3.6.0
 backports.zoneinfo==0.2.1
-<<<<<<< HEAD
 Django
 gunicorn==21.2.0
 packaging==23.1
-=======
-Django
->>>>>>> 2adccffb7169529454180fc057f57954b631acdd
 Pillow==9.4.0
 sqlparse==0.4.3
 tzdata==2022.7
