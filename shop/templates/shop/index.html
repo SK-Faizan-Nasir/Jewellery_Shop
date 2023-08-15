@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+{% block body %}
+
+<!-- <h2>Welcome {{user.username}}</h2>
+
+<h3>Here are some products we offer.</h3> -->
+
+<div class="container">
+<hr class="divider">
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-sm-6 col-md-3 col-sm-12">
+    <div class="thumbnail">
+      <img src="{{ product.p_photo.url }}" alt="img" width="100%" >
+      <div class="caption">
+        <h3>{{ product.p_name }}</h3>
+        <p>₹{{ product.p_cost }}\-</p>
+        <p><a href="{% url 'shop:detail' product.id %}" method="post" class="btn btn-primary" role="button" onclick="alert('This costs {{product.p_cost}}')">Details</a>
+            <a href="{% url 'shop:addToCart' product.id %}" class="btn btn-success">Add to Cart</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<hr class="divider">
+</div>
+<!-- <a href="{% url 'shop:logout' %}">Logout</a> -->
+
+{% endblock %}
